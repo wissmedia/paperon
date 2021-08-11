@@ -96,6 +96,7 @@ input[type=checkbox]{
     outline: none;
     border: none;
     font-size: 15px;
+    transition: 0.2s ease;
 }
 
 .tombol-md{
@@ -103,6 +104,7 @@ input[type=checkbox]{
     outline: none;
     border: none;
     font-size: 15px;
+    transition: 0.2s ease;
 }
 
 .tombol-block{
@@ -112,6 +114,14 @@ input[type=checkbox]{
     outline: none;
     border: none;
     font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.tombol:hover,
+.tombol-md:hover,
+.tombol-block:hover{
+    margin-top: -3px;
+    margin-bottom: 3px;
 }
 
 .bunder{
@@ -356,6 +366,43 @@ nav{
     text-align: center;
     font-weight: bold;
 }
+
+.card-img{
+    display: inline-block;
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    position: relative;
+}
+
+.card-img p{
+    margin-bottom: 10px;
+    margin-top: -5px;
+    font-size: 10px;
+}
+
+.card-img i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card-img h3{
+    margin-bottom: 10px;
+}
+
+.card-img img{
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.label-img{
+    text-align: center;
+    font-weight: bold;
+}
 /* END CARD */
 
 /* CARD-BLOCK */
@@ -474,6 +521,17 @@ nav{
 .edit-group span{
     position: absolute;
     top: 25%;
+}
+
+.edit-group .label{
+    position: absolute;
+    color: #424874;
+    top: 10px;
+    left: 20px;
+}
+
+.edit-group input.lainnya{
+    text-indent: 70px !important;
 }
 
 .edit-group input[type=radio]{
@@ -733,13 +791,6 @@ footer{
     font-size: 14px;
 }
 
-.form button{
-    margin-top: 30px;
-    width: 100%;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
 .form .register-link{
     margin-top: 20px;
     text-align: right;
@@ -886,7 +937,189 @@ footer{
     background-color: rgba(245, 245, 245, 0.829);
 }
 
+/* Modal */
+.modal{
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+}
+
+.modal-content{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 40%;
+    margin-left: -20%;
+    background-color: #fff;
+    height: 320px;
+    padding: 30px;
+    border-radius: 20px 20px 0px 0px;
+    overflow: auto;
+    display: none;
+}
+
+.modal-kepala{
+    position: sticky;
+    top: 0;
+}
+
+.list-menu-container{
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.list-menu-container a{
+    color: rgb(29, 29, 29);
+}
+
+.label-list{
+    margin-left: 10px;
+}
+
+.close{
+    margin-top: -10px;
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus{
+    color: #c22853;
+}
+
+.list-menu-container:hover,
+.list-menu-container:focus{
+    color: indigo;
+    margin-left: 10px;
+}
+
+.list-menu-container a:hover,
+.list-menu-container a:focus{
+    color: indigo;
+}
+
+.profile{
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.profile:hover,
+.profile.focus{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: indigo;
+}
+
+.dpAkun{
+    text-align: center;
+}
+
+.dpAkun i{
+    font-size: 50px;
+}
+/* End Modal */
+
+/* Transition */
+.fadeInAtas{
+    animation-name: fadeInAtas;
+    animation-duration: 1s;
+}
+
+.fadeInKiri{
+    animation-name: fadeInKiri;
+    animation-duration: 1s;
+}
+
+.fadeInKanan{
+    animation-name: fadeInKanan;
+    animation-duration: 1s;
+}
+
+.fadeInBawah{
+    animation-name: fadeInBawah;
+    animation-duration: 1s;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
 /* Animation */
+@keyframes fadeInAtas {
+    from{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInKiri {
+    from{
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInKanan {
+    from{
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInBawah {
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 @keyframes anime1 {
     0%  {left: 0px;}
     25% {left: 50px;}
@@ -1001,6 +1234,22 @@ footer{
     .card i{
         font-size: 20px;
     }
+
+    .card-img{
+        margin: 4px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
+        font-size: 20px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -1051,6 +1300,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 20px;
+    }
+
+    .dpAkun i{
+        font-size: 50px;
+    }
+    /* End Modal */
 }
 
 /* Ukuran Smartphone S */
@@ -1148,6 +1427,22 @@ footer{
     .card i{
         font-size: 25px;
     }
+
+    .card-img{
+        margin: 5px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
+        font-size: 25px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -1197,6 +1492,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 20px;
+    }
+
+    .dpAkun i{
+        font-size: 50px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 320px) and (min-width: 314px) {
@@ -1293,6 +1618,22 @@ footer{
     .card i{
         font-size: 25px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
+        font-size: 25px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -1342,6 +1683,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 20px;
+    }
+
+    .dpAkun i{
+        font-size: 50px;
+    }
+    /* End Modal */
 }
 
 /* Ukuran Smartphone M */
@@ -1439,6 +1810,22 @@ footer{
     .card i{
         font-size: 30px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 9px;
+    }
+    
+    .card-img i{
+        font-size: 30px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -1489,6 +1876,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 50px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 375px) and (min-width: 348px) {
@@ -1585,6 +2002,22 @@ footer{
     .card i{
         font-size: 30px;
     }
+
+    .card-img{
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 9px;
+    }
+    
+    .card-img i{
+        font-size: 30px;
+    }
     /* END CARD */
 
      /* CARD-BLOCK */
@@ -1633,6 +2066,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 50px;
+    }
+    /* End Modal */
 }
 
 /* Ukuran Smartphone L */
@@ -1730,6 +2193,22 @@ footer{
     .card i{
         font-size: 35px;
     }
+
+    .card-img{
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 35px;
+    }
     /* END CARD */
 
      /* CARD-BLOCK */
@@ -1779,6 +2258,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 440px) and (min-width: 420px) {
@@ -1875,6 +2384,22 @@ footer{
     .card i{
         font-size: 35px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 35px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -1924,6 +2449,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 479px) and (min-width: 441px) {
@@ -2020,6 +2575,22 @@ footer{
     .card i{
         font-size: 35px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 35px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2069,6 +2640,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 480px) and (min-width: 480px) {
@@ -2165,6 +2766,22 @@ footer{
     .card i{
         font-size: 35px;
     }
+
+    .card-img{
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 35px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2214,6 +2831,36 @@ footer{
     .edit-group button.add-lain{
         position: unset;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 30px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 /* Ukuran Tab */
@@ -2306,6 +2953,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2333,6 +2996,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 559px) and (min-width: 500px) {
@@ -2424,6 +3117,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2451,6 +3160,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 619px) and (min-width: 560px) {
@@ -2542,6 +3281,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2569,6 +3324,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 679px) and (min-width: 620px) {
@@ -2660,6 +3445,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 9px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2687,6 +3488,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 707px) and (min-width: 680px) {
@@ -2778,6 +3609,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 10px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2805,6 +3652,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 753px) and (min-width: 708px) {
@@ -2896,6 +3773,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 14px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -2923,6 +3816,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 789px) and (min-width: 754px) {
@@ -3014,6 +3937,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 15px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3041,6 +3980,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 799px) and (min-width: 790px) {
@@ -3132,6 +4101,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 15px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3159,6 +4144,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 800px) and (min-width: 800px) {
@@ -3250,6 +4265,22 @@ footer{
     .card i{
         font-size: 45px;
     }
+
+    .card-img{
+        margin: 16px;
+        width: 29%;
+        height: 29%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 45px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3277,6 +4308,36 @@ footer{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    button{
+        margin-left: 10px;
+    }
+
+    /* Modal */
+    .modal-content{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        height: 320px;
+        padding: 40px 80px;
+    }
+
+    .label-list{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .close{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+
+    .dpAkun i{
+        font-size: 55px;
+    }
+    /* End Modal */
 }
 
 /* Ukuran Tab 2 */
@@ -3373,6 +4434,22 @@ footer{
     }
 
     .card i{
+        font-size: 30px;
+    }
+
+    .card-img{
+        margin: 4px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
         font-size: 30px;
     }
     /* END CARD */
@@ -3504,6 +4581,22 @@ footer{
     .card i{
         font-size: 30px;
     }
+
+    .card-img{
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 5px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
+        font-size: 30px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3633,6 +4726,22 @@ footer{
     .card i{
         font-size: 30px;
     }
+
+    .card-img{
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 6px;
+        margin-top: -5px;
+        font-size: 8px;
+    }
+    
+    .card-img i{
+        font-size: 30px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3732,6 +4841,22 @@ footer{
     .card i{
         font-size: 50px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 50px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3756,6 +4881,13 @@ footer{
     .bottom-menu{
         width: 50%;
     }
+
+    /* Modal */
+    .modal-content{
+        width: 50%;
+        margin-left: -25%;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 1024px) and (min-width: 1000px){
@@ -3810,6 +4942,13 @@ footer{
     .bottom-menu{
         width: 50%;
     }
+
+    /* Modal */
+    .modal-content{
+        width: 50%;
+        margin-left: -25%;
+    }
+    /* End Modal */
 }
 
 /* Laptop L Ukuran 1220 */
@@ -3887,6 +5026,22 @@ footer{
     .card i{
         font-size: 50px;
     }
+
+    .card-img{
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 50px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -3908,6 +5063,13 @@ footer{
         width: 50%;
         font-size: 20px;
     }
+
+    /* Modal */
+    .modal-content{
+        width: 50%;
+        margin-left: -25%;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 1220px) and (min-width: 1120px){
@@ -3984,6 +5146,22 @@ footer{
     .card i{
         font-size: 50px;
     }
+
+    .card-img{
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 50px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4005,6 +5183,13 @@ footer{
         width: 50%;
         font-size: 20px;
     }
+
+    /* Modal */
+    .modal-content{
+        width: 50%;
+        margin-left: -25%;
+    }
+    /* End Modal */
 }
 
 @media screen and (max-width: 1299px) and (min-width: 1220px){
@@ -4078,6 +5263,22 @@ footer{
     .card i{
         font-size: 50px;
     }
+
+    .card-img{
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 50px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4135,6 +5336,22 @@ footer{
     }
 
     .card i{
+        font-size: 50px;
+    }
+
+    .card-img{
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
         font-size: 50px;
     }
     /* END CARD */
@@ -4229,6 +5446,22 @@ footer{
     .card i{
         font-size: 50px;
     }
+
+    .card-img{
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
+        font-size: 50px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4319,6 +5552,22 @@ footer{
     }
 
     .card i{
+        font-size: 50px;
+    }
+
+    .card-img{
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 8px;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    
+    .card-img i{
         font-size: 50px;
     }
     /* END CARD */
@@ -4421,6 +5670,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4447,6 +5712,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -4527,6 +5796,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 9px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4553,6 +5838,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -4633,6 +5922,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 10px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4659,6 +5964,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -4739,6 +6048,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 11px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4765,6 +6090,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -4845,6 +6174,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 12px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4871,6 +6216,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -4951,6 +6300,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 13px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -4977,6 +6342,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -5057,6 +6426,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 14px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -5083,6 +6468,10 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
 
@@ -5163,6 +6552,22 @@ footer{
     .card i{
         font-size: 55px;
     }
+
+    .card-img{
+        margin: 15px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .card-img p{
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+    }
+    
+    .card-img i{
+        font-size: 55px;
+    }
     /* END CARD */
 
     /* CARD-BLOCK */
@@ -5189,5 +6594,9 @@ footer{
     .content{
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    button{
+        margin-left: 10px;
     }
 }
