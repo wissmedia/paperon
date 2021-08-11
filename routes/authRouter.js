@@ -1,21 +1,11 @@
 const { Router } = require('express')
+const authController = require('../controllers/authController')
 const router = Router()
-let appTitle = 'Paperon'
 
-router.get('/signup', (req, res) => {
-  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
-})
-router.post('/signup', (req, res) => {
-  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
-})
-router.get('/login', (req, res) => {
-  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
-})
-router.post('/login', (req, res) => {
-  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
-})
-router.get('/logout', (req, res) => {
-  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
-})
+router.get('/signup', authController.signup_get)
+router.post('/signup', authController.signup_post)
+router.get('/login', authController.login_get)
+router.post('/login', authController.login_post)
+router.get('/logout', authController.logout_get)
 
 module.exports = router
