@@ -20,7 +20,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-  let navMenus = []
+  let navMenus = [
+    { link: '/responden', icon: 'fas fa-search', label: 'Mulai Menjawab' },
+  ]
   res.render('index', { appTitle, navTitle: 'Beranda', navMenus })
 })
 app.get('/admin', (req, res) => {
