@@ -20,10 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-  res.render('index', { appTitle, navTitle: 'Beranda' })
+  let navMenus = []
+  res.render('index', { appTitle, navTitle: 'Beranda', navMenus })
 })
 app.get('/admin', (req, res) => {
-  res.render('admin/admin-index', { appTitle, navTitle: 'Panel Admin' })
+  let navMenus = []
+  res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
 })
 app.get('/daftar', (req, res) => {
   res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
