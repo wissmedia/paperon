@@ -26,7 +26,12 @@ app.get('/', (req, res) => {
   res.render('index', { appTitle, navTitle: 'Beranda', navMenus })
 })
 app.get('/admin', (req, res) => {
-  let navMenus = []
+  let navMenus = [
+    { link: '/qbank', icon: 'fas fa-warehouse', label: 'Bank Pertanyaan' },
+    { link: '/quesioner', icon: 'fas fa-newspaper', label: 'Kuesioner' },
+    { link: '/result', icon: 'fas fa-poll', label: 'Hasil' },
+    { link: '/account', icon: 'fas fa-user-circle', label: 'Akun' },
+  ]
   res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
 })
 app.get('/daftar', (req, res) => {
