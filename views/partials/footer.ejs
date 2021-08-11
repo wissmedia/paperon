@@ -1,31 +1,23 @@
 <footer>
   <div class="bottom-menu">
-    <div class="menu">
-      <a href="content/add.html">
-        <i class="fas fa-plus-circle"></i>
-        <p>New</p>
-      </a>
-    </div>
-
-    <div class="menu">
-      <a href="content/quesioner.html" target="_blank">
-        <i class="fas fa-eye"></i>
-        <p>Publish</p>
-      </a>
-    </div>
-
-    <div class="menu">
-      <a href="content/result.html">
-        <i class="fas fa-poll"></i>
-        <p>Result</p>
-      </a>
-    </div>
-
-    <div class="menu">
-      <a href="">
-        <i class="far fa-question-circle"></i>
-        <p>About</p>
-      </a>
-    </div>
+    <% if (navMenus.length> 0) { %>
+      <% navMenus.forEach(item=> { %>
+        <div class="menu">
+          <a href="<%= item.link %> ">
+            <i class="<%= item.icon %>"></i>
+            <p>
+              <%= item.label %>
+            </p>
+          </a>
+        </div>
+        <% }) %>
+          <% } else { %>
+            <div class="menu">
+              <a href="/admin">
+                <i class="fas fa-home"></i>
+                <p>Admin Panel</p>
+              </a>
+            </div>
+            <% } %>
   </div>
 </footer>
