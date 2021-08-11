@@ -12,10 +12,12 @@ app.listen(port, host, () => {
   console.log(`App Listening at http://${host}:${port}`)
 })
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-  res.send('Hello World')
+  res.render('index')
 })
