@@ -2,6 +2,7 @@
 const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
+const mongoose = require('mongoose')
 const createError = require('http-errors');
 
 // import Router
@@ -16,10 +17,24 @@ const host = config.app.host
 const port = config.app.port
 const appTitle = 'Paperon'
 
-// Run Express
-app.listen(port, host, () => {
-  console.log(`App Listening at http://${host}:${port}`)
-})
+const dbURI = config.db.string
+
+// Run Express (no db)
+// app.listen(port, host, () => {
+//   console.log(`App Listening at http://${host}:${port}`)
+// })
+
+// Run Express (with MongoDB)
+mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+  .then(result => {
+    console.log(`Connected to DB`)
+    app.listen(port, host, () => {
+      console.log(`App listening at http://${host}:${port}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+  })
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
