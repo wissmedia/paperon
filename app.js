@@ -34,12 +34,13 @@ app.get('/admin', (req, res) => {
   ]
   res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
 })
-app.get('/daftar', (req, res) => {
+app.get('/signup', (req, res) => {
   res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
 })
-app.get('/masuk', (req, res) => {
+app.get('/login', (req, res) => {
   res.render('auth/login', { appTitle, navTitle: 'Masuk' })
 })
+
 app.get('/admin/qbank', (req, res) => {
   let navMenus = [
     { link: '/admin', icon: 'fas fa-chevron-circle-left', label: 'Kembali' },
