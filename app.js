@@ -13,6 +13,8 @@ app.listen(port, host, () => {
 
 app.set('view engine', 'ejs')
 
+app.use(morgan('dev'))
+
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
