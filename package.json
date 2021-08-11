@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wissmedia/paperon/issues"
   },
-  "homepage": "https://github.com/wissmedia/paperon#readme"
+  "homepage": "https://github.com/wissmedia/paperon#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
