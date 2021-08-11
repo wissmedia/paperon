@@ -22,3 +22,12 @@ app.use(morgan('dev'))
 app.get('/', (req, res) => {
   res.render('index', { appTitle, navTitle: 'Beranda' })
 })
+app.get('/admin', (req, res) => {
+  res.render('admin/admin-index', { appTitle, navTitle: 'Panel Admin' })
+})
+app.get('/daftar', (req, res) => {
+  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
+})
+app.get('/masuk', (req, res) => {
+  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
+})
