@@ -27,10 +27,10 @@ app.get('/', (req, res) => {
 })
 app.get('/admin', (req, res) => {
   let navMenus = [
-    { link: '/qbank', icon: 'fas fa-warehouse', label: 'Bank Pertanyaan' },
-    { link: '/quesioner', icon: 'fas fa-newspaper', label: 'Kuesioner' },
-    { link: '/result', icon: 'fas fa-poll', label: 'Hasil' },
-    { link: '/account', icon: 'fas fa-user-circle', label: 'Akun' },
+    { link: '/admin/qbank', icon: 'fas fa-warehouse', label: 'Bank Pertanyaan' },
+    { link: '/admin/quesioner', icon: 'fas fa-newspaper', label: 'Kuesioner' },
+    { link: '/admin/result', icon: 'fas fa-poll', label: 'Hasil' },
+    { link: '/admin/account', icon: 'fas fa-user-circle', label: 'Akun' },
   ]
   res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
 })
@@ -39,4 +39,17 @@ app.get('/daftar', (req, res) => {
 })
 app.get('/masuk', (req, res) => {
   res.render('auth/login', { appTitle, navTitle: 'Masuk' })
+})
+app.get('/admin/qbank', (req, res) => {
+  let navMenus = [
+    { link: '/admin', icon: 'fas fa-chevron-circle-left', label: 'Kembali' },
+    { link: '/admin/qbank/add', icon: 'fas fa-plus-circle', label: 'Tambah' },
+  ]
+  res.render('qbank/qbank-index', { appTitle, navTitle: 'Bank Pertanyaan', navMenus })
+})
+app.get('/admin/qbank/add', (req, res) => {
+  res.render('qbank/qbank-add', { appTitle, navTitle: 'Tambah Pertanyaan' })
+})
+app.get('/admin/qbank/detail', (req, res) => {
+  res.render('qbank/qbank-detail', { appTitle, navTitle: 'Detail Pertanyaan' })
 })
