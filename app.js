@@ -4,6 +4,9 @@ const path = require('path')
 const morgan = require('morgan')
 const createError = require('http-errors');
 
+// import Router
+const authRouter = require('./routes/authRouter')
+
 // Config File
 const config = require('./config')
 
@@ -35,12 +38,7 @@ app.get('/', (req, res) => {
 })
 
 // Auth Route
-app.get('/signup', (req, res) => {
-  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
-})
-app.get('/login', (req, res) => {
-  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
-})
+app.use(authRouter)
 
 // Admin Route
 app.get('/admin', (req, res) => {
