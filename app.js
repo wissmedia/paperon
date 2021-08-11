@@ -1,31 +1,48 @@
+// Dependencies
 const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 const createError = require('http-errors');
 
+// Config File
 const config = require('./config')
 
+// ENV
 const app = express()
 const host = config.app.host
 const port = config.app.port
 const appTitle = 'Paperon'
 
+// Run Express
 app.listen(port, host, () => {
   console.log(`App Listening at http://${host}:${port}`)
 })
 
+// View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
 
+//Middleware
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
+// Root Route
 app.get('/', (req, res) => {
   let navMenus = [
     { link: '/responden', icon: 'fas fa-search', label: 'Mulai Menjawab' },
   ]
   res.render('index', { appTitle, navTitle: 'Beranda', navMenus })
 })
+
+// Auth Route
+app.get('/signup', (req, res) => {
+  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
+})
+app.get('/login', (req, res) => {
+  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
+})
+
+// Admin Route
 app.get('/admin', (req, res) => {
   let navMenus = [
     { link: '/admin/qbank', icon: 'fas fa-warehouse', label: 'Bank Pertanyaan' },
@@ -35,13 +52,8 @@ app.get('/admin', (req, res) => {
   ]
   res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
 })
-app.get('/signup', (req, res) => {
-  res.render('auth/signup', { appTitle, navTitle: 'Daftar' })
-})
-app.get('/login', (req, res) => {
-  res.render('auth/login', { appTitle, navTitle: 'Masuk' })
-})
 
+// Qbank Route
 app.get('/admin/qbank', (req, res) => {
   let navMenus = [
     { link: '/admin', icon: 'fas fa-chevron-circle-left', label: 'Kembali' },
