@@ -1,0 +1,5193 @@
+/*--------- Custom Umum ------------------*/
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+body{
+    background-color: #F9F9F9;
+}
+
+/* Input Text */
+input[type=text]{
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #dddee9;
+    outline: none;
+    padding: 10px;
+}
+
+input[type=text]:hover{
+    border-bottom: 1px solid #424874;
+}
+
+input[type=text]:focus {
+    border-bottom: 1px solid #424874;
+}
+
+input[type=email]{
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #dddee9;
+    outline: none;
+    padding: 10px;
+}
+
+input[type=email]:hover{
+    border-bottom: 1px solid #424874;
+}
+
+input[type=email]:focus {
+    border-bottom: 1px solid #424874;
+}
+
+input[type=password]{
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #dddee9;
+    outline: none;
+    padding: 10px;
+}
+
+input[type=password]:hover{
+    border-bottom: 1px solid #424874;
+}
+
+input[type=password]:focus {
+    border-bottom: 1px solid #424874;
+}
+
+/* Input Radio */
+input[type=radio]{
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+/* Input Checkbox */
+input[type=checkbox]{
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+/* Tombol */
+.tombol{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.tombol-md{
+    padding: 10px 35px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.tombol-block{
+    padding: 10px;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.bunder{
+    border-radius: 50px;
+}
+
+/* Tombol Sukses */
+.tmb-sukses{
+    background-color: #70AF85;
+    color: #fff;
+}
+
+.tmb-sukses:hover{
+    background-color: #3A6351;
+}
+
+.tmb-sukses:focus{
+    background-color: #3A6351;
+}
+
+/* Tombol Utama */
+.tmb-utama{
+    background-color: #87A8D0;
+    color: #fff;
+}
+
+.tmb-utama:hover{
+    background-color: #4E709D;
+}
+
+.tmb-utama:focus{
+    background-color: #4E709D;
+}
+
+/* Tombol Batal */
+.tmb-batal{
+    background-color: #EB6383;
+    color: #fff;
+}
+
+.tmb-batal:hover{
+    background-color: #CD5D7D;
+}
+
+.tmb-batal:focus{
+    background-color: #CD5D7D;
+}
+
+/* Tombol Peringatan */
+.tmb-peringatan{
+    background-color: #FBC687;
+    color: #fff;
+}
+
+.tmb-peringatan:hover{
+    background-color: #E08F62;
+}
+
+.tmb-peringatan:focus{
+    background-color: #E08F62;
+}
+
+/*--------- End Custom Umum ------------------*/
+
+/* Top Navigasi */
+nav{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+}
+
+.mobile-nav{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 25px;
+    background-color: #424874;
+}
+
+.mobile-nav a{
+    color: #DCD6F7;
+}
+
+.logo{
+    flex: 50%;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.user{
+    flex: 50%;
+    padding: 10px 15px;
+    text-align: right;
+}
+
+.userbtn{
+    cursor: pointer;
+}
+
+/* Menu User */
+.menu-list{
+    background-color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.menu-list a{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #DCD6F7;
+    color: #424874;
+}
+
+.menu-list a:hover{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+    text-indent: 10px;
+    font-weight: bold;  
+}
+
+.menu-list .username{
+    background-color: #424874;
+    padding: 25px 0px;
+    color: #fff;
+}
+
+.menu-list .username h3{
+    text-align: center;
+}
+
+/* Body Content */
+.container{
+    padding-bottom: 110px;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container a{
+    color: #424874;
+}
+
+.row-menu{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu{
+    flex-grow: 1;
+
+    padding: 25px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83); 
+    box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83);
+    -moz-box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83);
+}
+
+.main-menu p{
+    font-size: 10px;
+}
+
+.main-menu i{
+    font-size: 50px;
+}
+
+/* ---- Menu Versi 2 */
+.row-menu-2{
+    text-align: center;
+    display: flex;
+}
+
+.main-menu-2{
+    padding: 25px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 28%;
+
+    -webkit-box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83); 
+    box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83);
+    -moz-box-shadow: 2px 4px 14px -10px rgba(132,132,132,0.83);
+}
+
+.main-menu-2 p{
+    font-size: 10px;
+}
+
+.main-menu-2 i{
+    font-size: 50px;
+}
+/* END Menu Versi 2 */
+
+/* CARD */
+.card{
+    display: inline-block;
+    padding: 25px;
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    position: relative;
+}
+
+.card p{
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.card i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3{
+    margin-bottom: 10px;
+}
+
+.card-label{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+}
+/* END CARD */
+
+/* CARD-BLOCK */
+.card-block{
+    display: inline-block;
+    padding: 25px;
+    margin: 2px 7px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 98%;
+    height: 30%;
+    text-align: center;
+    position: relative;
+}
+
+.card-block p{
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.card-block h3{
+    margin-bottom: 10px;
+}
+
+.card-block i{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.card-label{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+}
+/* END CARD-BLOCK */
+
+.menu-label{
+    word-wrap: break-word;
+    width: 50px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.row-content{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Component Content */
+.content{
+    padding: 0px 0px 20px 0px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #DCD6F7;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.line{
+    background-color: #424874;
+    height: 10px;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+}
+
+.bungkus-content{
+    padding: 10px 20px 10px 20px;
+}
+
+.judul{
+    margin-bottom: 15px;
+}
+
+.bungkus-content p{
+    font-size: 15px;
+}
+
+.bungkus-content label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bungkus-content span{
+    font-size: 15px;
+}
+
+/* STYLE EDIT */
+.edit input.text{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.edit .pratinjau{
+    margin: 10px 0px;
+    border-bottom-style: dashed;
+    border: none;
+    padding: 10px;
+}
+
+.edit .pratinjau:hover{
+    border-color: #dddee9;
+
+}
+
+.edit-group{
+    position: relative;
+    margin: 10px 0px;
+}
+
+.edit-group span{
+    position: absolute;
+    top: 25%;
+}
+
+.edit-group input[type=radio]{
+    position: absolute;
+    top: 25%;
+    font-size: 20px;
+}
+
+.edit-group input[type=checkbox]{
+    position: absolute;
+    top: 25%;
+    font-size: 20px;
+}
+
+.edit-group button{
+    position: absolute;
+    right: 5px;
+    font-size: 15px;
+
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.edit-group button:hover{
+    background-color: rgba(252, 229, 225, 0.5);
+}
+
+.edit-group button.add-lain{
+    color: #4E709D;
+    font-weight: bold;
+}
+.edit-group button.add-lain:hover{
+    background-color: rgba(225, 237, 252, 0.5);
+}
+
+.edit-group input[type=text]{
+    text-indent: 10px;
+}
+
+.baris{
+    float: left;
+    width: 45%;
+}
+
+.kolom{
+    float: right;
+    width: 45%;
+}
+
+.label-skala{
+    margin: 10px 0px;
+}
+
+.label-skala span{
+    display: inline-block;
+    width: 20px;
+    color: slategrey;
+}
+
+.container-control-edit{
+    float: left;
+    width: 100%;
+}
+
+.control-edit{
+    border-top: 1px dashed #dddee9;
+    text-align: right;
+    color: #424874;
+}
+
+.control-edit span{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.control-edit button{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: gray;
+}
+
+.control-edit button:hover{
+    color: #424874;
+}
+
+.wajib{
+    padding-right: 5px;
+    cursor: pointer;
+    color: gray;
+}
+
+input.wajib:checked + label.wajib{
+    color: #424874;
+}
+
+.divider{
+    color: darkgrey;
+}
+
+/* Form Group */
+.form_group label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.form_group input{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.form_group input:hover{
+    border-color: 1px solid #424874;
+    padding-left: 20px;
+}
+
+.form_group input:focus{
+    padding-left: 20px;
+}
+
+/* Dropdown */
+.dropdown{
+    padding: 5px;
+    border: none;
+    background-color: rgba(225, 237, 252, 0.5);
+    margin: 10px 0px;
+}
+
+.dropdown option{
+    padding: 10px;
+}
+
+/* Btn Reset */
+button.buttonReset{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(179, 179, 179);
+    padding: 5px;
+    float: right;
+}
+
+button.buttonReset:hover{
+    background-color: rgb(243, 243, 243);
+    border-radius: 3px;
+}
+
+/* Pilihan Ganda v2 */
+.pilihan-gandav2{
+    width: 100%;
+    font-size: 15px;
+    border-collapse: collapse;
+}
+
+.pilihan-gandav2 tr{
+    border-bottom: 5px solid #fff;
+}
+
+.pilihan-gandav2 th{
+    font-weight: normal;
+    padding: 5px;
+}
+
+.pilihan-gandav2 tr td{
+    background-color: rgb(243, 243, 243);
+    padding: 15px;
+}
+
+.pilihan-gandav2 tr td input{
+    margin: auto;
+}
+
+.jawab-singkat{
+    width: 50%;
+}
+
+textarea{
+    font-size: 14px;
+    border: 1px solid #dddee9;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea:hover{
+    border: 1px solid #424874;
+}
+
+textarea:focus{
+    border: 1px solid #424874;
+}
+
+/* Bottom Menu */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F9F9F9;
+}
+
+.bottom-menu{
+    width: 40%;
+    margin: 15px auto;
+    display: flex;
+    font-size: 25px;
+    background-color: #fff;
+    padding: 10px 0;
+    
+    margin-bottom: 10px;
+    border-radius: 50px;
+
+    -webkit-box-shadow: 0px -6px 14px -10px rgba(132,132,132,0.83); 
+    box-shadow: 0px -6px 14px -10px rgba(132,132,132,0.83);
+    -moz-box-shadow: 0px -6px 14px -10px rgba(132,132,132,0.83);
+}
+
+.bottom-menu a{
+    color: #424874;
+}
+
+.menu{
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu p{
+    font-size: 12px;
+}
+
+/* Login */
+.logo-form{
+    text-align: center;
+}
+
+.form{
+    padding: 50px;
+    text-align: center;
+}
+
+.form p{
+    font-size: 14px;
+}
+
+.form button{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.form .register-link{
+    margin-top: 20px;
+    text-align: right;
+    margin-bottom: -25px;
+}
+
+.form a{
+    color: #424874;
+}
+
+.grup-input{
+    background-color: brown;
+    margin: 30px 0px;
+    position: relative;
+}
+
+.grup-input span{
+    display: inline-block;
+    width: 30px;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.grup-input span i{
+    margin-top: 25%;
+}
+
+.grup-input input{
+    width: 100%;
+    text-indent: 35px;
+}
+
+.grup-input:focus-within{
+    color: #424874;;
+}
+
+.shortcut{
+    display: none;
+}
+
+/* Table */
+.data-content{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.data-table button.tombol{
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.data-table tbody tr:nth-child(even){
+    background-color: #42487418;
+}
+
+.data-table tbody tr:hover{
+    font-weight: bold;
+    background-color: #DCD6F7;
+}
+
+.table-responsive{
+    overflow-x: auto;
+}
+
+.error-container{
+    width: 40%;
+    margin: 0 auto;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.error-container p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.error-text{
+    display: block;
+    margin-top: 20%;
+    font-size: 200px;
+    font-weight: bold;
+    text-shadow: 3px 3px 0px #FFFFFF;
+}
+
+.animasi-1{
+    position: absolute;
+    background-color: #70AF85;
+    height: 200px;
+    width: 200px;
+    top: 50px;
+    border-radius: 0% 50% 50% 50%;
+    z-index: -1;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    -webkit-box-shadow: 5px -6px 0px 1px #94d1a9; 
+    box-shadow: 5px -6px 0px 1px #94d1a9;
+}
+
+.animasi-2{
+    position: absolute;
+    background-color: #e2aaaa;
+    height: 200px;
+    width: 200px;
+    border-radius: 50% 0% 50% 50%;
+    z-index: -1;
+    right: 50px;
+    bottom: 50px;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    -webkit-box-shadow: -5px 5px 0px 1px #ca8b8b;
+    box-shadow: -5px 5px 0px 1px #ca8b8b;
+}
+
+.add-list{
+    margin-top: 10px;
+    height: 400px;
+    width: 250px;
+    position: relative;
+    left: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px rgba(166,166,166,0.75);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(166,166,166,0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(166,166,166,0.75);
+    overflow: auto;
+    display: none;
+    color: rgb(58, 58, 58);
+}
+
+.add-list-content{
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.add-list-content:hover{
+    background-color: rgba(245, 245, 245, 0.829);
+}
+
+/* Animation */
+@keyframes anime1 {
+    0%  {left: 0px;}
+    25% {left: 50px;}
+    50% {left: 0px;}
+    75% {left: 50px;}
+    100%{left: 0px;}
+}
+
+@keyframes anime2 {
+    0%  {right: 0px;}
+    25% {right: 50px;}
+    50% {right: 0px;}
+    75% {right: 50px;}
+    100%{right: 0px;}
+}
+/* End Animation */
+
+/* ------------------------------------------------ */
+
+/* Ukuran Smartphone XS */
+@media screen and (max-width: 280px) {
+    .menu p{
+        font-size: 8px;
+    }
+
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 100px;
+        width: 100px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 100px;
+        width: 100px;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .main-menu-2{
+        padding: 10px;
+        margin: 5px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 8px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 20px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 4px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 20px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        width: 96%;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 20px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 20px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+/* Ukuran Smartphone S */
+@media screen and (max-width: 313px) and (min-width: 281px) {
+    .menu p{
+        font-size: 8px;
+    }
+
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 100px;
+        width: 100px;
+        top: 130px;
+    }
+    
+    .animasi-2{
+        height: 100px;
+        width: 100px;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 5px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 8px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 20px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 5px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 25px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 25px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 20px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 314px) {
+    .menu p{
+        font-size: 8px;
+    }
+
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 100px;
+        width: 100px;
+        top: 130px;
+    }
+    
+    .animasi-2{
+        height: 100px;
+        width: 100px;
+        right: 50px;
+        bottom: 50px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 5px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 8px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 20px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 25px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 25px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 20px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+/* Ukuran Smartphone M */
+@media screen and (max-width: 347px) and (min-width: 321px) {
+    .menu p{
+        font-size: 9px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 150px;
+        width: 150px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 150px;
+        width: 150px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 9px;
+    }
+
+    .card i{
+        font-size: 30px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 9px;
+    }
+
+    .card-block i{
+        font-size: 30px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 20px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 375px) and (min-width: 348px) {
+    .menu p{
+        font-size: 9px;
+    }
+
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 150px;
+        width: 150px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 150px;
+        width: 150px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 9px;
+    }
+
+    .card i{
+        font-size: 30px;
+    }
+    /* END CARD */
+
+     /* CARD-BLOCK */
+    .card-block{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+     .card-block p{
+        font-size: 9px;
+    }
+
+    .card-block i{
+        font-size: 30px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 20px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+/* Ukuran Smartphone L */
+@media screen and (max-width: 419px) and (min-width: 376px) {
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 150px;
+        width: 150px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 150px;
+        width: 150px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 35px;
+    }
+    /* END CARD */
+
+     /* CARD-BLOCK */
+    .card-block{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+     .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 35px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 25px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 25px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 440px) and (min-width: 420px) {
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 150px;
+        width: 150px;
+        top: 120px;
+    }
+    
+    .animasi-2{
+        height: 150px;
+        width: 150px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 35px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 35px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 25px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 25px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 479px) and (min-width: 441px) {
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 170px;
+        width: 170px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 170px;
+        width: 170px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 35px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 35px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 25px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 25px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 480px) {
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 170px;
+        width: 170px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 170px;
+        width: 170px;
+        right: 50px;
+        bottom: 10px;
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 35px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 35px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        font-size: 25px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bottom-menu{
+        width: 100%;
+        margin: 15px auto;
+        font-size: 25px;
+    }
+
+    /* Component Judul */
+    .content{
+        margin: 10px;
+    }
+
+    .jawab-singkat{
+        width: 100%;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+/* Ukuran Tab */
+@media screen and (max-width: 499px) and (min-width: 481px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 25%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 170px;
+        width: 170px;
+        top: 80px;
+    }
+    
+    .animasi-2{
+        height: 170px;
+        width: 170px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 559px) and (min-width: 500px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 20%;
+        font-size: 150px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 170px;
+        width: 170px;
+        top: 80px;
+    }
+    
+    .animasi-2{
+        height: 170px;
+        width: 170px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 619px) and (min-width: 560px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 200px;
+        width: 200px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 679px) and (min-width: 620px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 220px;
+        width: 220px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 220px;
+        width: 220px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 9px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 707px) and (min-width: 680px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 240px;
+        width: 240px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 240px;
+        width: 240px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 10px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 753px) and (min-width: 708px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 260px;
+        width: 260px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 260px;
+        width: 260px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 14px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 789px) and (min-width: 754px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 260px;
+        width: 260px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 260px;
+        width: 260px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 15px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 799px) and (min-width: 790px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 270px;
+        width: 270px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 270px;
+        width: 270px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 15px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 800px) {
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 270px;
+        width: 270px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 270px;
+        width: 270px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 11px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 40px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 16px;
+        width: 29%;
+        height: 29%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 45px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 45px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Ukuran Tab 2 */
+@media screen and (max-width: 899px) and (min-width: 801px){
+    .menu p{
+        font-size: 8px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 270px;
+        width: 270px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 270px;
+        width: 270px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        font-size: 16px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        font-size: 20px;
+    }
+
+    .container{
+        font-size: 15px;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 7px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 7px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 4px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 30px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 30px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 20px;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 950px) and (min-width: 900px){
+    .menu p{
+        font-size: 8px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 270px;
+        width: 270px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 270px;
+        width: 270px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .grup-input span i{
+        margin-top: 50%;
+    }
+
+    .menu-list{
+        font-size: 16px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        font-size: 20px;
+    }
+
+    .container{
+        font-size: 15px;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 7px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 7px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 30px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 30px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 20px;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 970px) and (min-width: 951px){
+    .menu p{
+        font-size: 8px;
+    }
+    
+    .error-container{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 10%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 270px;
+        width: 270px;
+        top: 10px;
+    }
+    
+    .animasi-2{
+        height: 270px;
+        width: 270px;
+        right: 50px;
+        bottom: 10px;
+    }
+    
+    .grup-input span i{
+        margin-top: 50%;
+    }
+    
+    .menu-list{
+        font-size: 16px;
+    }
+
+    .menu-list a:focus{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(221,222,233,1) 100%, rgba(6,44,99,1) 100%);
+        text-indent: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-nav{
+        font-size: 20px;
+    }
+    
+    .container{
+        font-size: 15px;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 30px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 8px;
+    }
+
+    .card i{
+        font-size: 30px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .card-block p{
+        font-size: 8px;
+    }
+
+    .card-block i{
+        font-size: 30px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 20px;
+    }
+
+    .baris{
+        width: 100%;
+    }
+    
+    .kolom{
+        width: 100%;
+    }
+
+    .edit-group button.add-lain{
+        position: unset;
+    }
+}
+
+/* Laptop M Ukuran 1024 */
+@media screen and (max-width: 999px) and (min-width: 971px) {
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 20%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 180px;
+        width: 180px;
+        top: 30px;
+    }
+    
+    .animasi-2{
+        height: 180px;
+        width: 180px;
+        right: 50px;
+        bottom: 30px;
+    }
+    
+    .container{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .mobile-nav{
+        width: 50%;
+    }
+
+    .bottom-menu{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 1000px){
+    .error-container{
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 180px;
+        width: 180px;
+        top: 100px;
+    }
+    
+    .animasi-2{
+        height: 180px;
+        width: 180px;
+        right: 50px;
+        bottom: 30px;
+    }
+    
+    .container{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .menu-list{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .mobile-nav{
+        width: 50%;
+    }
+
+    .bottom-menu{
+        width: 50%;
+    }
+}
+
+/* Laptop L Ukuran 1220 */
+@media screen and (max-width: 1119px) and (min-width: 1025px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 20%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 180px;
+        width: 180px;
+        top: 50px;
+    }
+    
+    .animasi-2{
+        height: 180px;
+        width: 180px;
+        right: 50px;
+        bottom: 30px;
+    }
+
+    .menu-list{
+        width: 50%;
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        width: 50%;
+        font-size: 20px;
+    }
+    
+    .container{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 50%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1220px) and (min-width: 1120px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 20%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 200px;
+        width: 200px;
+        top: 80px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 50px;
+        bottom: 30px;
+    }
+
+    .menu-list{
+        width: 50%;
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        width: 50%;
+        font-size: 20px;
+    }
+    
+    .container{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .main-menu{
+        padding: 15px;
+        margin: 10px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        width: 50%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1220px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 20%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 200px;
+        width: 200px;
+        top: 80px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 30px;
+    }
+    
+    .menu-list{
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        font-size: 30px;
+    }
+    
+    .container{
+        font-size: 25px;
+    }
+
+    .main-menu{
+        padding: 20px;
+        margin: 15px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 6px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1300px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .menu-list{
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        font-size: 30px;
+    }
+    
+    .container{
+        font-size: 25px;
+    }
+
+    .main-menu{
+        padding: 20px;
+        margin: 15px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1449px) and (min-width: 1441px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 30%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 250px;
+        width: 250px;
+        top: 80px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .menu-list{
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        font-size: 30px;
+    }
+    
+    .container{
+        font-size: 25px;
+    }
+
+    .main-menu{
+        padding: 20px;
+        margin: 15px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 7px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1530px) and (min-width: 1450px){
+    .menu p{
+        font-size: 10px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 250px;
+        width: 250px;
+        top: 150px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .menu-list{
+        font-size: 18px;
+    }
+
+    .mobile-nav{
+        font-size: 30px;
+    }
+    
+    .container{
+        font-size: 25px;
+    }
+
+    .main-menu{
+        padding: 20px;
+        margin: 15px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .card i{
+        font-size: 50px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .card-block p{
+        font-size: 10px;
+    }
+
+    .card-block i{
+        font-size: 50px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 30px;
+    }
+}
+
+/* Ukuran 4K */
+@media screen and (max-width: 1649px) and (min-width: 1531px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 250px;
+        width: 250px;
+        top: 150px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 8px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1799px) and (min-width: 1650px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 250px;
+        width: 250px;
+        top: 150px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 9px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1949px) and (min-width: 1800px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 250px;
+        width: 250px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 200px;
+        width: 200px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 10px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 2099px) and (min-width: 1950px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 300px;
+        width: 300px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 300px;
+        width: 300px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 11px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 2249px) and (min-width: 2100px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 200px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 300px;
+        width: 300px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 300px;
+        width: 300px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 12px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 2399px) and (min-width: 2250px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 250px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 350px;
+        width: 350px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 300px;
+        width: 300px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 13px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 2549px) and (min-width: 2400px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 40%;
+        font-size: 250px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 350px;
+        width: 350px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 300px;
+        width: 300px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 14px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 2550px){
+    .menu p{
+        font-size: 12px;
+    }
+    
+    .error-container{
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    
+    .error-container p{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .error-text{
+        display: block;
+        margin-top: 45%;
+        font-size: 300px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #FFFFFF;
+    }
+
+    .animasi-1{
+        height: 380px;
+        width: 380px;
+        top: 250px;
+    }
+    
+    .animasi-2{
+        height: 300px;
+        width: 300px;
+        right: 60px;
+        bottom: 5px;
+    }
+    
+    .container{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+
+    .mobile-nav{
+        font-size: 35px;
+        margin: 0 auto;
+    }
+
+    .main-menu-2{
+        padding: 15px;
+        margin: 10px;
+        width: 32%;
+    }
+
+    .main-menu-2 p{
+        font-size: 10px;
+    }
+    
+    .main-menu-2 i{
+        font-size: 50px;
+    }
+
+    /* CARD */
+    .card{
+        padding: 25px;
+        margin: 15px;
+        width: 30%;
+        height: 30%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card i{
+        font-size: 55px;
+    }
+    /* END CARD */
+
+    /* CARD-BLOCK */
+    .card-block{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .card-block p{
+        font-size: 12px;
+    }
+
+    .card-block i{
+        font-size: 55px;
+    }
+    /* END CARD-BLOCK */
+
+    .bottom-menu{
+        font-size: 35px;
+        margin: 15px auto;
+    }
+
+    /* Component Judul */
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
