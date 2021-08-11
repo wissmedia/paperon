@@ -7,6 +7,7 @@ const config = require('./config')
 const app = express()
 const host = config.app.host
 const port = config.app.port
+const appTitle = 'Paperon'
 
 app.listen(port, host, () => {
   console.log(`App Listening at http://${host}:${port}`)
@@ -19,5 +20,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { appTitle, navTitle: 'Beranda' })
 })
