@@ -4,6 +4,7 @@ const config = {
   app: {
     host: process.env.APP_HOST || "localhost",
     port: parseInt(process.env.APP_PORT) || 2121,
+    secret: process.env.JWT_SECRET
   },
   db: {
     host: process.env.DB_HOST || "localhost",
