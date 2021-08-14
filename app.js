@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
 const createError = require('http-errors');
 
 // # import Router
@@ -64,6 +65,7 @@ app.set('view engine', 'ejs')
 
 //Middleware
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(cookieParser())
 app.use(morgan('dev'))
 
 // Root Route
