@@ -1,35 +1,57 @@
-// Dependencies
+// # Dependencies
 const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const createError = require('http-errors');
 
-// import Router
+// # import Router
 const authRouter = require('./routes/authRouter')
 
-// Config File
+// # Config File
 const config = require('./config')
 
-// ENV
+// # APP ENV
 const app = express()
-const host = config.app.host
-const port = config.app.port
+const appHost = config.app.host
+const appPort = config.app.port
 const appTitle = 'Paperon'
 
-const dbURI = config.db.string
+// # DB ENV
+const dbHost = config.db.host
+const dbPort = config.db.port
+const dbUser = config.db.user
+const dbPass = config.db.pass
+const dbData = config.db.data
+
+// # dbURI using DB Partials
+const dbURI = `mongodb://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbData}`
+// # dbURI using DB_STRING
+// const dbURI = config.db.string
 
 // Run Express (no db)
 // app.listen(port, host, () => {
 //   console.log(`App Listening at http://${host}:${port}`)
 // })
 
-// Run Express (with MongoDB)
-mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+// Run Express (with MongoDB String Connection)
+// mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+//   .then(result => {
+//     console.log(`Connected to DB`)
+//     app.listen(port, host, () => {
+//       console.log(`App listening at http://${appHost}:${appPort}`)
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//   })
+
+// Run Express (with MongoDB Partials Connection)
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
   .then(result => {
-    console.log(`Connected to DB`)
-    app.listen(port, host, () => {
-      console.log(`App listening at http://${host}:${port}`)
+    console.log(`Connected to DB at ${dbHost}:${dbPort}`)
+    app.listen(appPort, appHost, () => {
+      console.log(`App listening at http://${appHost}:${appPort}`)
     })
   })
   .catch(err => {
