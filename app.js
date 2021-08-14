@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser')
 const createError = require('http-errors');
 
 // # import Router
+const { requireAuth, checkUser } = require('./middleware/authMiddleware')
 const authRouter = require('./routes/authRouter')
 
 // # Config File
