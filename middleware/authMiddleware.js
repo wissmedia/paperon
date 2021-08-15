@@ -1,5 +1,6 @@
 const config = require('../config')
 const jwt = require('jsonwebtoken')
+const User = require('../models/userModel')
 
 const secret = config.app.secret
 
