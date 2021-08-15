@@ -10,6 +10,7 @@ const createError = require('http-errors');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware')
 const authRouter = require('./routes/authRouter')
 const adminRouter = require('./routes/adminRouter')
+const qbankRouter = require('./routes/qbankRouter')
 
 // # Config File
 const config = require('./config')
@@ -90,19 +91,7 @@ app.use(authRouter)
 app.use('/admin', requireAuth, adminRouter)
 
 // Qbank Route
-app.get('/admin/qbank', (req, res) => {
-  let navMenus = [
-    { link: '/admin', icon: 'fas fa-chevron-circle-left', label: 'Kembali' },
-    { link: '/admin/qbank/add', icon: 'fas fa-plus-circle', label: 'Tambah' },
-  ]
-  res.render('qbank/qbank-index', { appTitle, navTitle: 'Bank Pertanyaan', navMenus })
-})
-app.get('/admin/qbank/add', (req, res) => {
-  res.render('qbank/qbank-add', { appTitle, navTitle: 'Tambah Pertanyaan' })
-})
-app.get('/admin/qbank/detail', (req, res) => {
-  res.render('qbank/qbank-detail', { appTitle, navTitle: 'Detail Pertanyaan' })
-})
+app.use('/admin/qbank', qbankRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
