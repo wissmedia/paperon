@@ -1,1 +1,31 @@
-ADD
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+  <body>
+    <%- include('../partials/nav.ejs') %>
+      <div class="container">
+        <div class="row-content">
+          <form action="/admin/qbank" method="POST">
+            <div class="content">
+              <div class="line"></div>
+              <div class="bungkus-content edit">
+                <p>*Judul</p>
+                <input type="text" name="title" id="judul" class="text" placeholder="Masukan judul" required>
+                <br>
+                <input type="text" name="desc" id="deskripsi" class="text" placeholder="Masukan deskripsi">
+              </div>
+            </div>
+
+            <button class="tombol-block tmb-utama">Kirim</button>
+          </form>
+        </div>
+      </div>
+
+      <%- include('../partials/auth-modal.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+          <%- include('../partials/footer-script.ejs') %>
+
+  </body>
+
+</html>
