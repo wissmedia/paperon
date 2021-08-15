@@ -71,6 +71,9 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(morgan('dev'))
 
+// check user on every route
+app.get('*', checkUser)
+
 // Root Route
 app.get('/', (req, res) => {
   let navMenus = [
