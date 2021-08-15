@@ -7,17 +7,24 @@
       <div class="container">
         <div class="card-container">
           <!-- Menu Item Card -->
-          <div class="card fadeInKiri">
-            <a href="/admin/qbank/detail">
-              <h3>
-                <i class="fas fa-plus-circle"></i>
-              </h3>
-              <div class="card-label">
-                <p>New quesioner</p>
+          <% if (qbanks.length> 0) { %>
+            <% qbanks.forEach(item=> { %>
+              <div class="card-block fadeInKiri">
+                <a href="/admin/qbank/<%= item._id %> ">
+                  <h3>
+                    <!-- <i class="<%= item.icon %>"></i> -->
+                    <%= item.title %>
+                  </h3>
+                  <h3 class="card-label">
+                    <%= item.desc %>
+                  </h3>
+                </a>
               </div>
-            </a>
-          </div>
-          <!-- END Menu Item Card -->
+              <% }) %>
+                <% } else { %>
+                  <p>Loading...</p>
+                  <% } %>
+                    <!-- END Menu Item Card -->
         </div>
       </div>
 
