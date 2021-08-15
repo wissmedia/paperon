@@ -9,6 +9,7 @@ const createError = require('http-errors');
 // # import Router
 const { requireAuth, checkUser } = require('./middleware/authMiddleware')
 const authRouter = require('./routes/authRouter')
+const adminRouter = require('./routes/adminRouter')
 
 // # Config File
 const config = require('./config')
@@ -86,15 +87,7 @@ app.get('/', (req, res) => {
 app.use(authRouter)
 
 // Admin Route
-app.get('/admin', (req, res) => {
-  let navMenus = [
-    { link: '/admin/qbank', icon: 'fas fa-warehouse', label: 'Bank Pertanyaan' },
-    { link: '/admin/quesioner', icon: 'fas fa-newspaper', label: 'Kuesioner' },
-    { link: '/admin/result', icon: 'fas fa-poll', label: 'Hasil' },
-    { link: '/admin/account', icon: 'fas fa-user-circle', label: 'Akun' },
-  ]
-  res.render('admin/admin-index', { appTitle, navTitle: 'Admin Panel', navMenus })
-})
+app.use('/admin', requireAuth, adminRouter)
 
 // Qbank Route
 app.get('/admin/qbank', (req, res) => {
