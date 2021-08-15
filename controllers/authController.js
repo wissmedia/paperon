@@ -11,11 +11,11 @@ const handleErrors = (err) => {
 
   // incorrect email
   if (err.message === 'incorrect email') {
-    errors.email = 'Email is not registered'
+    errors.email = 'Please enter a valid email'
   }
   // incorrect password
   if (err.message === 'incorrect password') {
-    errors.password = 'password not match'
+    errors.password = 'Password not match'
   }
   // duplicate errors
   if (err.code === 11000) {
