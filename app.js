@@ -93,6 +93,12 @@ app.use('/admin', requireAuth, adminRouter)
 // Qbank Route
 app.use('/admin/qbank', qbankRouter)
 
+// Quesioner Route
+app.get('/admin/quesioner', (req, res) => {
+  let navMenus = []
+  res.render('quesioner/quesioner-index', { appTitle, navTitle: 'Kuesioner', navMenus })
+})
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
