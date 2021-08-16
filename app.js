@@ -96,7 +96,19 @@ app.use('/admin/qbank', qbankRouter)
 // Quesioner Route
 app.get('/admin/quesioner', (req, res) => {
   let navMenus = []
-  res.render('quesioner/quesioner-index', { appTitle, navTitle: 'Kuesioner', navMenus })
+  res.render('quesioner/quesioner-index', { appTitle, navTitle: 'Data Kuesioner', navMenus })
+})
+
+// Result Route
+app.get('/admin/result', (req, res) => {
+  let navMenus = []
+  res.render('result/result-index', { appTitle, navTitle: 'Hasil Kuesioner', navMenus })
+})
+
+// Setting Route
+app.get('/admin/setting', (req, res) => {
+  let navMenus = []
+  res.render('setting/setting-index', { appTitle, navTitle: 'Pengaturan', navMenus })
 })
 
 // catch 404 and forward to error handler
