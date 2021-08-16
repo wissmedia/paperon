@@ -6,22 +6,21 @@
 
     <div class="modal-badan">
       <% if (user) { %>
-        <a href="/admin">
-          <div class="profile" id="username">
-            <div class="dpAkun">
+        <div class="profile" id="username">
+          <div class="dpAkun">
               <i class="far fa-smile"></i>
               <p>
                 <%= user.name %>
               </p>
-              <p>
-                <%= user.email %>
-              </p>
-              <p>
-                <%= user.bio %>
-              </p>
-            </div>
+            <p>
+              <%= user.email %>
+            </p>
+            <p>
+              <%= user.bio %>
+            </p>
           </div>
-        </a>
+        </div>
+
         <a href="/logout">
           <div class="list-menu-container" id="login">
             <i class="fas fa-sign-out-alt"></i>
